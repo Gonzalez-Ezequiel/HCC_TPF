@@ -149,5 +149,5 @@ class video(Scene):
         self.wait(2)
         self.play(Transform(cub,cub2))
         self.wait(10)
-        self.play(FadeOut(cub,eq1,eq3,remp5,resta5)) #desaparezco todo
+        self.play(FadeOut(cub,eq1,eq3,remp5,resta5)) #desaparezcotodo
         self.wait(1)

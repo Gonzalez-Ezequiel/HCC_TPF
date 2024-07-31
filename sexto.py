@@ -77,7 +77,7 @@ class video(Scene):
 
 
 
-     #quito todo
+     #quitotodo
      self.play(FadeOut(cub,ax,solucion,dot11,dot22,tangent,dot1,dot2))
 
      #agradecimiento
