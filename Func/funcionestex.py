@@ -1,14 +1,14 @@
 from manim import *
-def esctex(self, texto, tiempo=1, posicion=[0, 0, 0], escala=1.0):
+def esctex(self, texto, posicion=[0, 0, 0], escala=1.0, tiempo=0):
     texto2 = texto.scale(escala).move_to(posicion)
-    self.play(Write(texto2, run_time=tiempo))
+    self.play(Write(texto2))
     self.wait(tiempo)
 
 
 def esctex2(self, texto):
-    texto2 = texto[0].scale(texto[3]).move_to(texto[2])
+    texto2 = texto[0].scale(texto[2]).move_to(texto[1])
     self.play(Write(texto2))
-    self.wait(texto[1])
+    self.wait(texto[3])
 
 
 def bortex(self, texto):
