@@ -13,3 +13,9 @@ def esctex2(self, texto):
 
 def bortex(self, texto):
     self.play(FadeOut(texto[0]))
+
+def transf(self,text1,posicion=[0,0,0],escala=1):
+
+    # Mover el texto a la nueva posición
+    self.play(text1.animate.shift(posicion).scale(escala),
+            run_time=1)
