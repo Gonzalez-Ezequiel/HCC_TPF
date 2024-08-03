@@ -1,6 +1,4 @@
 from manim import *
-import numpy as np
-import sympy as sp
 def tangente(self,funcion,ax,punto):  #genera la recta tangente a una funcion en un punto dado.
     func = ax.plot(lambda x: eval(funcion, {"x" : x}))  # elijo esta funcion para hacer mover la recta tangente
     x = ValueTracker(punto)
