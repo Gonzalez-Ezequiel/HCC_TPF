@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/1185818338_3182889855_223132457.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_2108474933_2618668308.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_1720084887_2437409668.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_3636024140_1153775190.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_1174231618_914269612.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_3636024140_969548447.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_2903057112_65188995.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_3257661881_561373342.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_441269088_3225202723.mp4'
+file 'file:D:/Manim/prueba/HCC_TPF/media/videos/tercero/480p15/partial_movie_files/video/624642324_1141282389_4004411027.mp4'

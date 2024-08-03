@@ -36,3 +36,5 @@ def movobj(self,variable,punto,tiempo):
 def varparm(self,variable,puntos,tiempo=2,nro=1):
     animaciones= [variable[i].animate.set_value(puntos[i]) for i in range(0,nro)]
     self.play(*animaciones, run_time=tiempo)
+
+
