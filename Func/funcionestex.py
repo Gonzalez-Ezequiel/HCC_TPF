@@ -19,3 +19,13 @@ def transf(self,text1,posicion=[0,0,0],escala=1):
     # Mover el texto a la nueva posición
     self.play(text1.animate.shift(posicion).scale(escala),
             run_time=1)
+def multtrans(self,texto,tiempo=2,ref=0,inicial=-2,final=-1):
+    if ((final == -1) and (inicial==-2)):
+        for i in range(1,len(texto)):
+            self.play(Transform(texto[0],texto[i]),run_time=tiempo)
+    elif ((final== -1) and (inicial!=-2)):
+        for i in range(inicial+1, len(texto)):
+            self.play(Transform(texto[ref], texto[i]), run_time=tiempo)
+    else:
+        for i in range(inicial + 1, final+1):
+            self.play(Transform(texto[ref], texto[i]), run_time=tiempo)

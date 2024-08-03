@@ -1,4 +1,6 @@
 from manim import *
+from Func.funcionesgraf import *
+from Func.funcionestex import *
 
 class video(Scene):
     def construct(self):
@@ -15,23 +17,23 @@ class video(Scene):
 
         #planteo las 4 ecuaciones una por una.
         #(1)
-
-        ec1= MathTex ("P(0)=2",color="white").move_to([-3,0,0])
-        ec11 = MathTex("a\cdot 0^3+b\cdot 0^2+c\cdot 0+d=2", color="white").move_to([3, 0, 0])
-        ec111 = MathTex("a\cdot 0^3+b\cdot 0^2+c\cdot 0+d=2", color="white").move_to([0, 0, 0])
-        ec1111 = MathTex("d=2", color="white").move_to([0, 0, 0])
-        ec11111 = MathTex("d=2", color="white").move_to([5, 3.2, 0]).scale(0.6)
-        ec11111f = MathTex("d=2", color="white").move_to([0, 1.5, 0])
+        ec1= []
+        ec2 = []
+        P02= MathTex ("P(0)=2",color="white").move_to([-3,0,0])
+        ec1.append( MathTex("a\cdot 0^3+b\cdot 0^2+c\cdot 0+d=2", color="white").move_to([3, 0, 0]))
+        ec1.append(MathTex("a\cdot 0^3+b\cdot 0^2+c\cdot 0+d=2", color="white").move_to([0, 0, 0]))
+        ec1.append(MathTex("d=2", color="white").move_to([0, 0, 0]))
+        ec1.append(MathTex("d=2", color="white").move_to([5, 3.2, 0]).scale(0.6))
+        ec1.append(MathTex("d=2", color="white").move_to([0, 1.5, 0]))
 
         #(2)
-
-        ec2 = MathTex("P(2)=0", color="white").move_to([-3, 0, 0])
-        ec22 = MathTex("a\cdot 2^3+b\cdot 2^2+c\cdot 2+d=0", color="white").move_to([3, 0, 0])
-        ec222 = MathTex("a\cdot 2^3+b\cdot 2^2+c\cdot 2+d=0", color="white").move_to([0, 0, 0])
-        ec222b = MathTex("a\cdot 8+b\cdot 4+c\cdot 2+d=0", color="white").move_to([0, 0, 0])
-        ec2222 = MathTex("8a+4b+2c+d=2", color="white").move_to([0, 0, 0])
-        ec22222 = MathTex("8a+4b+2c+d=2", color="white").move_to([5, 2.8, 0]).scale(0.6)
-        ec22222f = MathTex("8a+4b+2c+d=2", color="white").move_to([0, 0.5, 0])
+        P20 = MathTex("P(2)=0", color="white").move_to([-3, 0, 0])
+        ec2.append(MathTex("a\cdot 2^3+b\cdot 2^2+c\cdot 2+d=0", color="white").move_to([3, 0, 0]))
+        ec2.append(MathTex("a\cdot 2^3+b\cdot 2^2+c\cdot 2+d=0", color="white").move_to([0, 0, 0]))
+        ec2.append(MathTex("a\cdot 8+b\cdot 4+c\cdot 2+d=0", color="white").move_to([0, 0, 0]))
+        ec2.append(MathTex("8a+4b+2c+d=2", color="white").move_to([0, 0, 0]))
+        ec2.append(MathTex("8a+4b+2c+d=2", color="white").move_to([5, 2.8, 0]).scale(0.6))
+        ec2.append(MathTex("8a+4b+2c+d=2", color="white").move_to([0, 0.5, 0]))
 
         #derivo el polinomio de forma generica
 
@@ -68,32 +70,23 @@ class video(Scene):
 
         # planteo ec1
         self.play(Write(condicion11,run_time=1),Write(ecd4,run_time=2))
-        self.play(Write(ec1,run_time=2))
+        self.play(Write(P02,run_time=2))
         self.play(Write(flecha,run_time=3))
-        self.play(Write(ec11,run_time=3))
+        self.play(Write(ec1[0],run_time=3))
         self.wait(3)
-        self.remove(ec1,flecha)
-        self.play(Transform(ec11,ec111,run_time=2))
+        self.remove(P02,flecha)
+        multtrans(self,ec1,2,0,0,3)
         self.wait(2)
-        self.play(Transform(ec11,ec1111,run_time=2))
-        self.wait(2)
-        self.play(Transform(ec11, ec11111, run_time=2))
 
-        self.wait(2)
         # planteo ec2
         self.play(FadeOut(condicion11,run_time=0.2),FadeIn(condicion22,run_time=1))
-        self.play(Write(ec2, run_time=2))
+        self.play(Write(P20, run_time=2))
         self.play(Write(flecha, run_time=1.3))
-        self.play(Write(ec22, run_time=3))
-        self.wait(3)
-        self.remove(ec2, flecha)
-        self.play(Transform(ec22, ec222, run_time=1))
-        self.wait(2.5)
-        self.play(Transform(ec22, ec222b, run_time=1))
-        self.wait(2.5)
-        self.play(Transform(ec22, ec2222, run_time=1))
-        self.wait(2.5)
-        self.play(Transform(ec22, ec22222, run_time=2))
+        self.play(Write(ec2[0], run_time=3))
+        self.remove(P20, flecha)
+        self.play(Transform(ec2[0],ec2[1]),run_time=1)
+        multtrans(self, ec2,2,0,1, 4)
+
 
         self.wait(3)
         # derivo y planteo ec3
@@ -137,7 +130,7 @@ class video(Scene):
         self.wait(2)
         self.remove(condicion33,ecd2)
         #Planteo el sistema completo
-        self.play(Transform(ec11,ec11111f),Transform(ec22,ec22222f),Transform(ec33,ec33333f),Transform(ec44,ec44444f),Write(llave))
+        self.play(Transform(ec1[0],ec1[4]),Transform(ec2[0],ec2[5]),Transform(ec33,ec33333f),Transform(ec44,ec44444f),Write(llave))
         self.wait(3)
 
 
